@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+<div class="well" ng-controller="viewContactCntrl">
+	<table class="table table-striped">
+		<tr>
+			<th>First name</th>
+			<th>Last name</th>
+			<th>Phone number</th>
+			<th>Email</th>
+			<th>Actions</th>
+		</tr>
+		<tr ng-repeat="contact in contact">
+			<td>{{contact.firstName}}</td>
+			<td>{{contact.lastName}}</td>
+			<td>{{contact.phoneNumber}}</td>
+			<td>{{contact.email}}</td>
+			<td>
+				<button ng-href="#!edit" class="btn btn-warning">Edit</button>
+				<button ng-click="delContact($index)" class="btn btn-danger">Delete</button>
+			</td>
+		</tr>
+	</table>
+</div>
